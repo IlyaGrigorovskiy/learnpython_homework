@@ -16,19 +16,19 @@
 """
 import sys
 
-str_1 = "Привет777"
-str_2 = 'learn2'
+str_1 = 7777
+str_2 = 'learn'
 def main(str_1,str_2):
 
-    if type(str_1) and type(str_2) is not str:
-        print(0)
-        sys.exit("Введенные переменные не являются строками!")
-    else:
+    if isinstance(str_1, str) and isinstance(str_2, str):
         if str_1 == str_2:
             print(1)
-        elif str_1 != str_2 and len(str_1) > len(str_2) and str_2 != 'learn':
+        elif len(str_1) > len(str_2) and str_2 != 'learn':
             print(2)
-        elif str_1 != str_2 and str_2 == 'learn' :
+        elif str_2 == 'learn' :
             print(3)
+
+    else:
+        sys.exit("Введенные переменные не являются строками!")
 
 main(str_1,str_2)

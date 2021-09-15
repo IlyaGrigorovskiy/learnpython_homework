@@ -24,12 +24,12 @@ def ask_user(answers_dict):
     while True:
         question = input("Введите вопрос:")
         if question == "":
+            print("Пока!")
             break
         else:
-            if question in questions_and_answers.keys():
-                print(questions_and_answers[question])
-            else:
-                print("Сложный вопрос!Спроси другой!")
+            print(questions_and_answers.get(question, "Сложный вопрос!Спроси другой!"))
+
+
 
 
 if __name__ == "__main__":

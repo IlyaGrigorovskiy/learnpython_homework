@@ -23,11 +23,11 @@ def main(age):
 
     if age <= 6:
         massage = ("Ваше место в садике!")
-    elif 6 < age < 18:
+    elif age < 18:
         massage = ("Ваше место в школе!")
-    elif 6 < age < 18:
+    elif age < 23:
         massage = ("Ваше место в университете!")
-    elif age >= 18:
+    elif age >= 23:
         massage = ("Работать!Работать!Работать!")
     print(massage)
 
@@ -36,6 +36,7 @@ def main(age):
 while True:
     age = input("Введите свой возраст: ")
     if age == "exit" or age == "":
+        print("Ну и ладно, пока!")
         break
     else:
         main(int(age))
